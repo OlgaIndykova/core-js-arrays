@@ -120,8 +120,22 @@ function getStringsLength(arr) {
  *   getAverage([ 1, 10, 100, 1000 ])  => 277,75
  *   getAverage([ 2, 3, 3 ])  => 2,67
  */
-function getAverage(/* arr */) {
-  throw new Error('Not implemented');
+function getAverage(arr) {
+  let res;
+  if (arr.length === 0) {
+    res = 0;
+  } else {
+    const num = arr.reduce((a, b) => {
+      return a + b;
+    });
+    if (num % arr.length === 0) {
+      res = num / arr.length;
+    }
+    if (num % arr.length !== 0) {
+      res = (num / arr.length).toFixed(2);
+    }
+  }
+  return Number(res);
 }
 
 /**
@@ -273,8 +287,8 @@ function createNDimensionalArray(/* n, size */) {
  *    flattenArray(['a', ['b', ['c', 'd'], 'e'], 'f']) => ['a', 'b', 'c', 'd', 'e', 'f']
  *    flattenArray([1, 2, 3, 4]) => [1, 2, 3, 4]
  */
-function flattenArray(/* nestedArray */) {
-  throw new Error('Not implemented');
+function flattenArray(nestedArray) {
+  return nestedArray.flat(Infinity);
 }
 
 /**
@@ -420,6 +434,10 @@ function getIdentityMatrix(n) {
  *    getIndicesOfOddNumbers([11, 22, 33, 44, 55]) => [0, 2, 4]
  */
 function getIndicesOfOddNumbers(/* numbers */) {
+  // const arr = numbers.filter((el) => {
+  //   if (el % 2 === 1) el.indexOf();
+  // });
+  // return arr;
   throw new Error('Not implemented');
 }
 
