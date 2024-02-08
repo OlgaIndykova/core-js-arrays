@@ -41,7 +41,7 @@ function sumArrays(arr1, arr2) {
   // const res;
   // return arrays
   (arr1, arr2).sort((a, b) => b.length - a.length);
-  (arr1, arr2).reduce((a, c) => a.map((n, i) => n + (c[i] || 0)) || c);
+  // (arr1, arr2).reduce((a, c) => a.map((n, i) => n + (c[i] || 0)) || c);
   // throw new Error('Not implemented');
 }
 
@@ -169,7 +169,7 @@ function isSameLength(arr) {
  *    isValueEqualsIndex([10, 20, 30, 40, 50]) => false
  */
 function isValueEqualsIndex(arr) {
-  return arr.every((el, ind) => el === ind); ///// need to solve
+  return arr.every((el, ind) => el === ind); /// need to solve
   // throw new Error('Not implemented');
 }
 
