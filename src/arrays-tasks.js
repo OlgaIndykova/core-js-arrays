@@ -37,8 +37,12 @@ function getIntervalArray(start, end) {
  *    sumArrays([10, 20, 30], [5, 10, 15]) => [15, 30, 45]
  *    sumArrays([-1, 0, 1], [1, 2, 3, 4]) => [0, 2, 4, 4]
  */
-function sumArrays(/* arr1, arr2 */) {
-  throw new Error('Not implemented');
+function sumArrays(arr1, arr2) {
+  // const res;
+  // return arrays
+  (arr1, arr2).sort((a, b) => b.length - a.length);
+  (arr1, arr2).reduce((a, c) => a.map((n, i) => n + (c[i] || 0)) || c);
+  // throw new Error('Not implemented');
 }
 
 /**
@@ -148,8 +152,9 @@ function getAverage(arr) {
  *    isSameLength(['orange', 'banana', 'cherry']) => true
  *    isSameLength(['cat', 'dog', 'elephant']) => false
  */
-function isSameLength(/* arr */) {
-  throw new Error('Not implemented');
+function isSameLength(arr) {
+  const size = arr[0].toString().length;
+  return arr.every((el) => size === el.length);
 }
 
 /**
@@ -163,8 +168,9 @@ function isSameLength(/* arr */) {
  *    isValueEqualsIndex([2, 1, 0, 4, 5]) => true
  *    isValueEqualsIndex([10, 20, 30, 40, 50]) => false
  */
-function isValueEqualsIndex(/* arr */) {
-  throw new Error('Not implemented');
+function isValueEqualsIndex(arr) {
+  return arr.every((el, ind) => el === ind); ///// need to solve
+  // throw new Error('Not implemented');
 }
 
 /**
@@ -433,12 +439,12 @@ function getIdentityMatrix(n) {
  *    getIndicesOfOddNumbers([2, 4, 6, 8, 10]) => []
  *    getIndicesOfOddNumbers([11, 22, 33, 44, 55]) => [0, 2, 4]
  */
-function getIndicesOfOddNumbers(/* numbers */) {
-  // const arr = numbers.filter((el) => {
-  //   if (el % 2 === 1) el.indexOf();
-  // });
-  // return arr;
-  throw new Error('Not implemented');
+function getIndicesOfOddNumbers(numbers) {
+  const arr = numbers.filter((el) => {
+    if (el === 1 || el % 2 === 1) arr.indexOf(el);
+    return arr;
+  });
+  // throw new Error('Not implemented');
 }
 
 /**
@@ -451,8 +457,9 @@ function getIndicesOfOddNumbers(/* numbers */) {
  *    getHexRGBValues([ 0, 255, 16777215]) => [ '#000000', '#0000FF', '#FFFFFF' ]
  *    getHexRGBValues([]) => []
  */
-function getHexRGBValues(/* arr */) {
-  throw new Error('Not implemented');
+function getHexRGBValues(arr) {
+  return arr.map((el) => `#${el.toString(16)}`);
+  // throw new Error('Not implemented');
 }
 
 /**
