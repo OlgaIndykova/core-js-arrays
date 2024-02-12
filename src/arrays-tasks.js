@@ -37,12 +37,12 @@ function getIntervalArray(start, end) {
  *    sumArrays([10, 20, 30], [5, 10, 15]) => [15, 30, 45]
  *    sumArrays([-1, 0, 1], [1, 2, 3, 4]) => [0, 2, 4, 4]
  */
-function sumArrays(arr1, arr2) {
+function sumArrays(/* arr1, arr2 */) {
   // const res;
   // return arrays
-  (arr1, arr2).sort((a, b) => b.length - a.length);
+  // (arr1, arr2).sort((a, b) => b.length - a.length);
   // (arr1, arr2).reduce((a, c) => a.map((n, i) => n + (c[i] || 0)) || c);
-  // throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
 
 /**
@@ -169,8 +169,7 @@ function isSameLength(arr) {
  *    isValueEqualsIndex([10, 20, 30, 40, 50]) => false
  */
 function isValueEqualsIndex(arr) {
-  return arr.every((el, ind) => el === ind); /// need to solve
-  // throw new Error('Not implemented');
+  return arr.some((el) => el === arr.indexOf(el));
 }
 
 /**
@@ -439,12 +438,14 @@ function getIdentityMatrix(n) {
  *    getIndicesOfOddNumbers([2, 4, 6, 8, 10]) => []
  *    getIndicesOfOddNumbers([11, 22, 33, 44, 55]) => [0, 2, 4]
  */
-function getIndicesOfOddNumbers(numbers) {
-  const arr = numbers.filter((el) => {
-    if (el === 1 || el % 2 === 1) arr.indexOf(el);
-    return arr;
-  });
-  // throw new Error('Not implemented');
+function getIndicesOfOddNumbers(/* numbers */) {
+  // const res = numbers.filter((el, index) => {
+  //   if (el === 1 || el % 2 === 1) {
+  //     index;
+  //   }
+  // });
+  // return res;
+  throw new Error('Not implemented');
 }
 
 /**
@@ -476,8 +477,11 @@ function getHexRGBValues(arr) {
  *   getMaxItems([ 10, 2, 7, 5, 3, -5 ], 3) => [ 10, 7, 5 ]
  *   getMaxItems([ 10, 10, 10, 10 ], 3) => [ 10, 10, 10 ]
  */
-function getMaxItems(/* arr, n */) {
-  throw new Error('Not implemented');
+function getMaxItems(arr, n) {
+  arr.sort().reverse();
+  return arr.splice(n);
+  // return res;
+  // throw new Error('Not implemented');
 }
 
 /**
@@ -543,6 +547,7 @@ function propagateItemsByPositionIndex(/* arr */) {
  *    shiftArray([10, 20, 30, 40, 50], -3) => [40, 50, 10, 20, 30]
  */
 function shiftArray(/* arr, n */) {
+  // const newArr = arr.
   throw new Error('Not implemented');
 }
 
