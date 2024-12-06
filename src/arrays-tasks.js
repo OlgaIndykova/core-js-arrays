@@ -444,7 +444,7 @@ function getIndicesOfOddNumbers(numbers) {
     if (el === 1 || el % 2 === 1) {
       newArr.push(index);
     }
-    return 0;
+    return el[index];
   });
   return newArr;
 }
@@ -478,10 +478,10 @@ function getHexRGBValues(arr) {
  *   getMaxItems([ 10, 10, 10, 10 ], 3) => [ 10, 10, 10 ]
  */
 function getMaxItems(arr, n) {
-  arr.sort().reverse();
-  return arr.splice(n);
-  // return res;
-  // throw new Error('Not implemented');
+  arr.sort((a, b) => {
+    return a - b;
+  });
+  return arr.reverse().slice(0, n);
 }
 
 /**
