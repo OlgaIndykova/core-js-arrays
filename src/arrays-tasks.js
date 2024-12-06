@@ -438,14 +438,15 @@ function getIdentityMatrix(n) {
  *    getIndicesOfOddNumbers([2, 4, 6, 8, 10]) => []
  *    getIndicesOfOddNumbers([11, 22, 33, 44, 55]) => [0, 2, 4]
  */
-function getIndicesOfOddNumbers(/* numbers */) {
-  // const res = numbers.filter((el, index) => {
-  //   if (el === 1 || el % 2 === 1) {
-  //     index;
-  //   }
-  // });
-  // return res;
-  throw new Error('Not implemented');
+function getIndicesOfOddNumbers(numbers) {
+  const newArr = [];
+  numbers.map((el, index) => {
+    if (el === 1 || el % 2 === 1) {
+      newArr.push(index);
+    }
+    return 0;
+  });
+  return newArr;
 }
 
 /**
@@ -459,8 +460,7 @@ function getIndicesOfOddNumbers(/* numbers */) {
  *    getHexRGBValues([]) => []
  */
 function getHexRGBValues(arr) {
-  return arr.map((el) => `#${el.toString(16)}`);
-  // throw new Error('Not implemented');
+  return arr.map((el) => `#${el.toString(16).padStart(6, 0).toUpperCase()}`);
 }
 
 /**
